@@ -1,10 +1,11 @@
+require('dotenv').config();
 async function fetchBooks() {
     const selectedGenre = document.getElementById('genre').value;
     const url = `https://goodreads-books.p.rapidapi.com/genres/${selectedGenre}/best`;
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'a5019cca0amsh64bdbc0fccc1b72p1ececcjsn5634fe37b586',
+            'X-RapidAPI-Key': process.env.RAPIDAPI_KEY,
             'X-RapidAPI-Host': 'goodreads-books.p.rapidapi.com'
         }
     };
