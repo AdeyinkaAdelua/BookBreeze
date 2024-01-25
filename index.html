@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BookBreeze</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to BookBreeze</h1>
+<p>Discover your next literary adventure! Select a genre from the dropdown menu and click "Generate" to explore a curated list of books. Whether you're into romance, science fiction, thrillers, comedy, or historical fiction, BookBreeze has something for every reader. Enjoy your journey through the world of captivating stories!</p>
+
+        <label for="genre">Select a genre:</label>
+        <select id="genre">
+            <!-- Add your desired genres as options -->
+            <option value="romance">Romance</option>
+            <option value="science-fiction">Science Fiction</option>
+            <option value="thriller">Thriller</option>
+            <option value="comedy">Comedy</option>
+            <option value="historical-fiction">Historical Fiction</option>
+            <!-- Add more genres as needed -->
+        </select>
+
+        <button onclick="fetchBooks()">Generate</button>
+
+        <div id="books-container"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
