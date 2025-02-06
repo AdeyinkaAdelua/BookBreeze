@@ -8,12 +8,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to BookBreeze</h1>
-<p>Discover your next literary adventure! Select a genre from the dropdown menu and click "Generate" to explore a curated list of books. Whether you're into romance, science fiction, thrillers, comedy, or historical fiction, BookBreeze has something for every reader. Enjoy your journey through the world of captivating stories!</p>
+        <h1>Welcome to Readify</h1>
+<p>Find your next great read! Choose a genre and hit 'Generate' to discover your next book obsession. From romance to sci-fi, thrillers to history, Readify has it all!</p>
 
         <label for="genre">Select a genre:</label>
         <select id="genre">
             <!-- Add your desired genres as options -->
+            <option value="" disabled selected>Select a genre...</option>
             <option value="romance">Romance</option>
             <option value="science-fiction">Science Fiction</option>
             <option value="thriller">Thriller</option>
@@ -21,8 +22,13 @@
             <option value="historical-fiction">Historical Fiction</option>
             <!-- Add more genres as needed -->
         </select>
+        
+        
 
-        <button onclick="fetchBooks()">Generate</button>
+        <button id="generate-btn">Generate</button>
+        <div id="books-container"></div>
+        <div id="pagination-container" style="text-align: center; margin-top: 20px;"></div>
+            
 
         <div id="books-container"></div>
     </div>
